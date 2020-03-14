@@ -27,14 +27,14 @@ class Header extends Component {
     }
 
     render() {
-        return <Navbar color="primary" dark expand="md">
+        return <Navbar color="warning" dark expand="md">
             <Container>
                 <NavLink
                     tag={RRNavLink}
                     className="navbar-brand"
                     exact to="/">
-                    <i className="fa fa-cubes mr-3"></i>
-                    <span className="project-name">Software Technologies</span>
+                    
+                    <i class="fas fa-hamburger"></i> <span className="project-name"> <h2>Recipes 🍰</h2></span>
                 </NavLink>
             <NavbarToggler onClick={this.toggleIsOpen} />
             <Collapse isOpen={this.state.isOpen} navbar>
@@ -52,26 +52,11 @@ class Header extends Component {
                             tag={RRNavLink}
                             exact to="/favorite"
                             activeClassName="active">
-                            Favorite Movies
+                            Recipes
                         </NavLink>
                     </NavItem>
-                    <NavItem>
-                        <NavLink
-                            tag={RRNavLink}
-                            exact to="/popularmovies"
-                            activeClassName="active">
-                            Popular Movies
-                        </NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink
-                            tag={RRNavLink}
-                            exact 
-                            to="/gallery"
-                            activeClassName="active">
-                            Gallery
-                        </NavLink>
-                    </NavItem>
+                    
+
                 </Nav>
             </Collapse>
             </Container>

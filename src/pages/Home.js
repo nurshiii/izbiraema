@@ -1,37 +1,23 @@
 import React, {Component} from "react";
-import QuantityInput from '../components/quantityInput';
-import ItemList from '../components/itemList';
-import TestList from '../components/testList/testList';
+
 class Home extends Component {
 
     render() {
         return <div className="row">
-            <div className="col-md-4">
-                <div className="card">
-                    <div className="card-body">
-                        <ItemList/>
-                    </div>
-                </div>
-            </div>
-            <div className="col-md-4">
-                <div className="card">
-                    <div className="card-body">
-                        <QuantityInput/>
-                        <QuantityInput/>
-                        <QuantityInput/>
-                        <QuantityInput/>
-                    </div>
-                </div>
-            </div>
-            <div className="col-md-4">
-                <div className="card">
-                    <div className="card-body">
-                        <TestList/>
-                    </div>
-                </div>
-            </div>
+            
+            
+               <h3>Cook once,eat twice with our brilliant recipes. </h3>
+               
+            <img  id= "center" src="https://img.taste.com.au/d1KrT8cn/w720-h480-cfill-q80/taste/2016/11/little-orange-polenta-cakes-110443-1.jpeg"></img>
+           
+        
         </div>
+        
+        
+        
     }
+    
+    
 }
 
-export default Home;
+export default Home ;

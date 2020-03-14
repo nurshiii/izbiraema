@@ -1,10 +1,9 @@
 import React from 'react';
-import Movies from './components/Movies';
 import Header from './components/header/Header';
 import Home from './pages/Home';
-import Favorite from './pages/Favorite';
-import MovieList from './pages/MovieList';
-import MovieDetails from './pages/MovieDetails';
+import Recipe from './pages/Recipe';
+
+import './App.css';
 
 
 import { createStore, applyMiddleware } from "redux";
@@ -19,11 +18,6 @@ import {
 } from "react-router-dom";
 
 const store = createStore(reducers, applyMiddleware(thunk));
-
-
-
-// Skype alexppetrov
-
 
 const Layout = props => (
     <>
@@ -46,31 +40,9 @@ const routes = [
         path: '/favorite',
         exact: false,
         main: () => <Layout>
-            <Favorite/>
+            <Recipe/>
         </Layout>
     },
-    {
-        path: '/gallery',
-        exact: false,
-        main: () => <Layout>
-            <Movies/>
-        </Layout>
-    },
-    {
-        path: '/popularmovies',
-        exact: true,
-        main: () => <Layout>
-            <MovieList/>
-        </Layout>
-    },
-    {
-        path: '/moviedetails/:id',
-        exact: false,
-        main: () => <Layout>
-            <MovieDetails/>
-        </Layout>
-    }
-
 ]
 
 const getRoutes = () => {
@@ -92,16 +64,7 @@ function App() {
             </Switch>
         </Router>
     </Provider>
-}
+  }
 
-export default App;
-
-
-//TODO
-// 1. Да се добави в навигацията нов линк 
-// към нова страничка (компонент) MovieList.js
-// * Да се добави в routes, да се дефинира път 
-// "/popularmovies", на който да се зареди MovieList 
-
-// 2. В MovieList да се зареди компонент отговарящ на един
-// филм, примерно SingleMovie.js
+  export default App;
+  
